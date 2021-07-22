@@ -14,7 +14,7 @@ import android.widget.Spinner;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
-    EditText edtNama, edtUsia;
+    EditText edtNama, edtUsia, edtNoTelp;
     Button btnSimpan;
     String namanya;
     Button btnPindah;
@@ -22,10 +22,12 @@ public class MainActivity extends AppCompatActivity {
     Spinner spnAgama;
     String pria= "pria";
     String wanita= "wanita";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        edtNoTelp= findViewById(R.id.edt_notelp);
         edtNama= findViewById(R.id.edt_nama);
         edtUsia= findViewById(R.id.edt_usia);
         btnSimpan= findViewById(R.id.btn_simpan);
@@ -52,6 +54,7 @@ public class MainActivity extends AppCompatActivity {
                 String agama= String.valueOf(spnAgama.getSelectedItem());
                 Intent intent = new Intent(getApplicationContext(), SecondActivity.class);
                 intent.putExtra("nama", edtNama.getText().toString());
+                intent.putExtra("phone", edtNoTelp.getText().toString());
                 intent.putExtra("usia", edtUsia.getText().toString());
                 if (rbPria.isChecked()){
                     intent.putExtra("gender", pria);

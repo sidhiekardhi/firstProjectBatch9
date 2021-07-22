@@ -7,17 +7,31 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Masukkan Nama"
+            android:id="@+id/edt_nama"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Nama"
+        android:text="No. Telepon"
         android:layout_margin="10dp"/>
 
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Masukkan Nama"
-        android:id="@+id/edt_nama"/>
+        android:hint="Masukkan No telepon"
+        android:inputType="number"
+        android:id="@+id/edt_notelp"/>
+
 
     <TextView
         android:layout_width="wrap_content"
@@ -78,6 +92,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Pindah halaman" />
+
 
 
 

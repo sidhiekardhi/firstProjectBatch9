@@ -4,13 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:gravity="center"
     android:orientation="vertical">
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="300dp"
-        android:layout_height="300dp"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:layout_gravity="center"
         tools:srcCompat="@tools:sample/avatars" />
 
     <Button
@@ -18,4 +18,17 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/take" />
+
+    <ImageView
+        android:id="@+id/imageViewLibrary"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:layout_gravity="center"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <Button
+        android:id="@+id/btnTakeLibrary"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/takeLibrary" />
 </LinearLayout>
