@@ -36,6 +36,20 @@
         android:layout_height="wrap_content"
         android:text="gender"
         android:layout_margin="10dp"/>
+
+    <RadioButton
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/rb_pria"
+        android:text="pria"/>
+
+    <RadioButton
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/rb_wanita"
+        android:text="wanita"/>
+
+
     <!--       gender pakenya radio button-->
 
     <TextView
@@ -45,6 +59,11 @@
         android:layout_margin="10dp"/>
     <!--       agama pakenya dropdown-->
 
+    <Spinner
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/spn_agama"
+        android:entries="@array/agama"/>
 
 
 

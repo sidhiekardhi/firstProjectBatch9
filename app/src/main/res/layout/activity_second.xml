@@ -11,12 +11,21 @@
         android:id="@+id/txtNama"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Ini adalah halaman kedua" />
+        android:layout_gravity="center"/>
 
     <EditText
-        android:id="@+id/edt_name"
+        android:id="@+id/edt_usia"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="textPersonName" />
+        android:ems="10"/>
+    <EditText
+        android:id="@+id/edt_gender"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"/>
+    <EditText
+        android:id="@+id/edt_agama"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"/>
 </LinearLayout>

@@ -1,4 +1,11 @@
 <resources>
     <string name="app_name">firstProject</string>
     <string name="kontak">kontak</string>
+    <string-array name="agama">
+        <item>Islam</item>
+        <item>Kristen</item>
+        <item>Katholik</item>
+        <item>Budha</item>
+        <item>Hindu</item>
+    </string-array>
 </resources>

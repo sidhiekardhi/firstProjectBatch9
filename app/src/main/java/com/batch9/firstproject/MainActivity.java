@@ -8,13 +8,20 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
+import android.widget.Spinner;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
-EditText edtNama, edtUsia;
-Button btnSimpan;
+    EditText edtNama, edtUsia;
+    Button btnSimpan;
     String namanya;
     Button btnPindah;
+    RadioButton rbPria, rb_wanita;
+    Spinner spnAgama;
+    String pria= "pria";
+    String wanita= "wanita";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -23,7 +30,9 @@ Button btnSimpan;
         edtUsia= findViewById(R.id.edt_usia);
         btnSimpan= findViewById(R.id.btn_simpan);
         btnPindah= findViewById(R.id.btn_pindah);
-
+        rbPria= findViewById(R.id.rb_pria);
+        rb_wanita= findViewById(R.id.rb_wanita);
+        spnAgama= findViewById(R.id.spn_agama);
         btnSimpan.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -31,14 +40,25 @@ Button btnSimpan;
                 Toast toast = Toast.makeText(getApplicationContext(), namanya, Toast.LENGTH_SHORT);
                 toast.show();
                 System.out.println(edtNama.getText().toString());
+
             }
         });
 
         btnPindah.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
+                System.out.println(spnAgama.getSelectedItem());
+                String agama= String.valueOf(spnAgama.getSelectedItem());
                 Intent intent = new Intent(getApplicationContext(), SecondActivity.class);
                 intent.putExtra("nama", edtNama.getText().toString());
+                intent.putExtra("usia", edtUsia.getText().toString());
+                if (rbPria.isChecked()){
+                    intent.putExtra("gender", pria);
+                } else {
+                    intent.putExtra("gender", wanita);
+                }
+                intent.putExtra("agama", agama );
                 startActivity(intent);
             }
         });

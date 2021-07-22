@@ -9,15 +9,22 @@ import android.widget.TextView;
 
 public class SecondActivity extends AppCompatActivity {
     TextView txtNama;
-EditText edtName;
+EditText edtUsia, edtAgama, edtGender;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_second);
         txtNama= findViewById(R.id.txtNama);
-        edtName= findViewById(R.id.edt_name);
+        edtUsia= findViewById(R.id.edt_usia);
+        edtAgama= findViewById(R.id.edt_agama);
+        edtGender= findViewById(R.id.edt_gender);
         String nameOld=getIntent().getStringExtra("nama");
-        edtName.setText(nameOld);
+        String usiaOld=getIntent().getStringExtra("usia");
+        String genderOld=getIntent().getStringExtra("gender");
+        String agamaOld=getIntent().getStringExtra("agama");
         txtNama.setText(nameOld);
+        edtUsia.setText(usiaOld);
+        edtGender.setText(genderOld);
+        edtAgama.setText(agamaOld);
     }
 }
