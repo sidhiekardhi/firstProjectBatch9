@@ -8,4 +8,7 @@
         <item>Budha</item>
         <item>Hindu</item>
     </string-array>
+    <string name="form">Form</string>
+    <string name="kamera">Kamera</string>
+    <string name="take">Take a picture</string>
 </resources>
